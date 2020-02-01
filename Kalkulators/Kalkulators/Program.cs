@@ -13,7 +13,7 @@ namespace Kalkulators
             Console.ReadLine();
 
             Menu();
-            
+
         }
         static void Menu()
         {
@@ -21,9 +21,6 @@ namespace Kalkulators
             Console.WriteLine("1: Pamatdarbibas(+, -, *, /)");
             Console.WriteLine("2: Kapinasana");
             Console.WriteLine("3: Kvadratsakne");
-
-            char ja;
-            char menu;
 
             zvaigznes();
 
@@ -48,34 +45,34 @@ namespace Kalkulators
             Console.WriteLine("Ievadiet pirmo skaitli!");
             String ievade = Console.ReadLine();
 
-            float skaitlis1 = Convert.ToInt32(ievade);
+            double skaitlis1 = Convert.ToDouble(ievade);
 
             Console.WriteLine("Ievadiet otro skaitli!");
             String ievade2 = Console.ReadLine();
 
-            float skaitlis2 = Convert.ToInt32(ievade2);
+            double skaitlis2 = Convert.ToDouble(ievade2);
 
             Console.WriteLine("Ievadiet veicamo darbibu! (+, -, x, /)");
             String darbiba = Console.ReadLine();
 
             if (darbiba == "+")
             {
-                float rezultats = skaitlis1 + skaitlis2;
+                double rezultats = skaitlis1 + skaitlis2;
                 Console.WriteLine("Rezultats = " + rezultats);
             }
             else if (darbiba == "-")
             {
-                float rezultats = skaitlis1 - skaitlis2;
+                double rezultats = skaitlis1 - skaitlis2;
                 Console.WriteLine("Rezultats = " + rezultats);
             }
             else if (darbiba == "x")
             {
-                float rezultats = skaitlis1 * skaitlis2;
+                double rezultats = skaitlis1 * skaitlis2;
                 Console.WriteLine("Rezultats = " + rezultats);
             }
             else if (darbiba == "/")
             {
-                float rezultats = skaitlis1 / skaitlis2;
+                double rezultats = skaitlis1 / skaitlis2;
                 Console.WriteLine("Rezultats = " + rezultats);
             }
             else Console.WriteLine("Ievadita nepareiza darbiba!");
@@ -85,12 +82,12 @@ namespace Kalkulators
             Console.WriteLine("Ievadiet skaitli!");
             String ievade = Console.ReadLine();
 
-            double skaitlis = Convert.ToInt32(ievade);
+            double skaitlis = Convert.ToDouble(ievade);
 
             Console.WriteLine("Ievadiet kapinataju!");
             ievade = Console.ReadLine();
 
-            double kapinatajs = Convert.ToInt32(ievade);
+            double kapinatajs = Convert.ToDouble(ievade);
 
             double rezultats = Math.Pow(skaitlis, kapinatajs);
             Console.WriteLine("Rezultats = " + rezultats);
@@ -100,7 +97,7 @@ namespace Kalkulators
             Console.WriteLine("Ievadiet skaitli!");
             String ievade = Console.ReadLine();
 
-            double skaitlis = Convert.ToInt32(ievade);
+            double skaitlis = Convert.ToDouble(ievade);
 
             Console.WriteLine("Rezultats = " + Math.Sqrt(skaitlis));
         }
@@ -109,20 +106,6 @@ namespace Kalkulators
             int i;
             for (i = 1; i < zv; i++) Console.Write("*");
         }
-        static void turpinat()
-        {
-            Console.WriteLine("Vai velaties turpinat darbibu? J - ja, N - atgriezties uz Menu, citi taustini - iziet no programmas!");
-            String izvele = Console.ReadLine();
-
-            if (izvele == "j")
-            {
-
-            }
-            else if (izvele == "n")
-            {
-                Menu();
-            }
-            else 
-        }
+        
     }
 }
