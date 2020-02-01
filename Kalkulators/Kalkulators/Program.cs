@@ -22,6 +22,9 @@ namespace Kalkulators
             Console.WriteLine("2: Kapinasana");
             Console.WriteLine("3: Kvadratsakne");
 
+            char ja;
+            char menu;
+
             zvaigznes();
 
             String izvele = Console.ReadLine();
@@ -105,6 +108,21 @@ namespace Kalkulators
         {
             int i;
             for (i = 1; i < zv; i++) Console.Write("*");
+        }
+        static void turpinat()
+        {
+            Console.WriteLine("Vai velaties turpinat darbibu? J - ja, N - atgriezties uz Menu, citi taustini - iziet no programmas!");
+            String izvele = Console.ReadLine();
+
+            if (izvele == "j")
+            {
+
+            }
+            else if (izvele == "n")
+            {
+                Menu();
+            }
+            else 
         }
     }
 }
