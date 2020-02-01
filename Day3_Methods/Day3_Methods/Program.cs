@@ -6,45 +6,87 @@ namespace Day3_Methods
     {
         static void Main(string[] args)
         {
-            /*piemers1();
-            piemers2();
-            piemers3(3, 7);
-            int c = piemers4();*/
 
-            //1. saskaitisana
-            //ievads main metode, padodam skaitlus uz musu izveidoto metodi ka parametrus
-            //izvade notiek tur
-
-            //2. ievade notiek musu izveidota metode
-            //rezultatu atgriezam ar return un izvadam main
-
-            //3. apvienojam 1. un 2.
-            //Musu izveidotaja metode notiek tikai darbiba
-            //visa ievade/izvade notiek main(gan parametri, gan return)
-
-            Console.WriteLine("Ievadiet pirmo skaitli");
-            String ievade = Console.ReadLine();
-            int num1 = Convert.ToInt32(ievade);
-            Console.WriteLine("Ievadiet otro skaitli");
-            ievade = Console.ReadLine();
-            int num2 = Convert.ToInt32(ievade);
-
-            Console.WriteLine("Rezultats ir " + sum3(num1, num2));
-
-
-
-
-
-
+            //Ievada skaitli
+            //Uztaisam metodi, kas atgriez (return) vai skaitlis ir pozitivs vai negativs
+            int skaitlis = ievade();
+            Console.WriteLine(pozNeg(skaitlis));
 
         }
-        
-        static void sum1(int a, int b)
+
+        static bool pozNeg(int a)
+        {
+            if (a > 0)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        static int ievade()
+        {
+            Console.WriteLine("Ievadiet skaitli!");
+            String skaitlaIevade = Console.ReadLine();
+            int skaitlis = Convert.ToInt32(skaitlaIevade);
+
+            return skaitlis;
+        }
+
+        static int compare(int a, int b)
+        {
+            if (a > b)
+            {
+                return a;
+            }
+            else
+            {
+                return b;
+            }
+        }
+
+        static void refactorTask()
+        {
+            //Cilveks ievada tris skaitlus- int
+            //Jaizvada lielakais
+
+            int skaitlis1 = ievade();
+            int skaitlis2 = ievade();
+            int skaitlis3 = ievade();
+
+            int big = compare(skaitlis1, skaitlis2);
+            big = compare(big, skaitlis3);
+
+            Console.WriteLine("Lielakais ir " + big);
+        }
+
+        static int salidzinasana(int a, int b, int c)
+        {
+            int biggest = 0;
+
+            if (a > b)
+            {
+                biggest = a;
+            }
+            else
+            {
+                biggest = b;
+            }
+
+            if (biggest < c)
+            {
+                biggest = c;
+            }
+
+            return biggest;
+
+        }
+
+        static void Sum1(int a, int b)
         {
             Console.WriteLine("Rezultats ir " + (a + b));
         }
 
-        static int sum2()
+        static int Sum2()
         {
             Console.WriteLine("Ievadiet pirmo skaitli");
             String ievade = Console.ReadLine();
@@ -58,7 +100,7 @@ namespace Day3_Methods
             return rez;
         }
 
-        static int sum3(int a, int b)
+        static int Sum3(int a, int b)
         {
             return a + b;
         }
@@ -93,6 +135,34 @@ namespace Day3_Methods
             String ievade = Console.ReadLine();
 
             return ievade;
+        }
+
+        static void uzdevumi()
+        {
+            /*piemers1();
+            piemers2();
+            piemers3(3, 7);
+            int c = piemers4();*/
+
+            //1. saskaitisana
+            //ievads main metode, padodam skaitlus uz musu izveidoto metodi ka parametrus
+            //izvade notiek tur
+
+            //2. ievade notiek musu izveidota metode
+            //rezultatu atgriezam ar return un izvadam main
+
+            //3. apvienojam 1. un 2.
+            //Musu izveidotaja metode notiek tikai darbiba
+            //visa ievade/izvade notiek main(gan parametri, gan return)
+
+            Console.WriteLine("Ievadiet pirmo skaitli");
+            String ievade = Console.ReadLine();
+            int num1 = Convert.ToInt32(ievade);
+            Console.WriteLine("Ievadiet otro skaitli");
+            ievade = Console.ReadLine();
+            int num2 = Convert.ToInt32(ievade);
+
+            Console.WriteLine("Rezultats ir " + Sum3(num1, num2));
         }
     }
 }
