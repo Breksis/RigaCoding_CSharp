@@ -4,12 +4,10 @@ namespace PD1
 {
     class Program
     {
-        private static bool a;
-        private static bool b;
 
         static void Main(string[] args)
         {
-            virkne();
+            sveiciens();
         }
 
         static int ievade()
@@ -71,17 +69,47 @@ namespace PD1
 
         static void virkne()
         {
+            String virkne;
+            String suns = "suns";
+            String zirgs = "zirgs";
             do
             {
                 Console.WriteLine("Ievadiet simbolu virkni!");
-                String virkne = Console.ReadLine();
-                String suns = "suns";
-                String zirgs = "zirgs";
-
-                bool a = virkne.Contains(suns);
-                bool b = virkne.Contains(zirgs);
+                virkne = Console.ReadLine();
             }
-            while (a || b);
+            while (virkne.Contains(suns) || virkne.Contains(zirgs));
+
         }
+
+        static void spele()
+        {
+            Console.WriteLine("1. speletaj ievadiet minamo vardu!");
+            String minamais = Console.ReadLine();
+
+
+            for (int i = 0; i<5; i++)
+            {
+                Console.WriteLine("2. speletaj ievadiet jusu variantu!");
+                String minejums = Console.ReadLine();
+
+                if (minejums == minamais)
+                {
+                    Console.WriteLine("Apsveicam! Uzvar 2. speletajs!");
+                    break;
+                }
+            }
+        }
+
+        static void sveiciens()
+        {
+            Console.WriteLine("Labdien! Ludzu ievadiet savu vardu!");
+            String vards = Console.ReadLine();
+            if (vards.EndsWith("s"))
+            {
+                Console.WriteLine("Esiet sveicinats " + vards.Remove(vards.Length - 1) + "!");
+            }
+            else Console.WriteLine("Esiet sveicinata " + vards + "!");
+        }
+
     }
 }
