@@ -7,7 +7,7 @@ namespace PD1
 
         static void Main(string[] args)
         {
-            sveiciens();
+            virkne();
         }
 
         static int ievade()
@@ -109,6 +109,11 @@ namespace PD1
                 Console.WriteLine("Esiet sveicinats " + vards.Remove(vards.Length - 1) + "!");
             }
             else Console.WriteLine("Esiet sveicinata " + vards + "!");
+        }
+
+        static void salidzinasana2()
+        {
+
         }
 
     }
