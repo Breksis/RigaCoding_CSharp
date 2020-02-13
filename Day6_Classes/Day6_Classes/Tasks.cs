@@ -24,5 +24,15 @@ namespace Day6_Classes
         {
             return a;
         }
+
+        public static void setB(int localB)
+        {
+            b = localB;
+        }
+
+        public static int getB()
+        {
+            return b;
+        }
     }
 }

@@ -63,13 +63,47 @@ namespace Day6_tasks
 
         static void task4()
         {
-            String input2 = "";
+            String input = "";
             do
             {
                 Console.WriteLine("Ievadiet frazi");
-                input2 = Console.ReadLine();
+                input = Console.ReadLine();
             }
-            while (input2.Contains("zirgs") || input2.Contains("suns"));
+            while (input.Contains("zirgs") || input.Contains("suns"));
+        }
+
+        static void task5()
+        {
+            Console.WriteLine("Ievadiet minamo vardu!");
+            String minamais = Console.ReadLine();
+
+            Console.Clear();
+
+            for(int i = 5; i > 0; i--)
+            {
+                Console.WriteLine("Ievadiet vardu, vel palikusi " + i + "meginajumi");
+                Console.WriteLine("Varda garums ir " + minamais.Length);
+
+                String ievade = Console.ReadLine();
+                if(ievade == minamais)
+                {
+                    Console.WriteLine("Uzvar otrais speletajs!");
+                    break;
+                }
+                if(ievade != minamais && i == 1)
+                {
+                    Console.WriteLine("Uzvar pirmais speletajs!");
+                }
+
+            }
+        }
+
+        static void task6()
+        {
+            Console.WriteLine("Ievadiet savu vardu!");
+            String vards = Console.ReadLine();
+
+            Console.WriteLine("Sveiks " + vards);
         }
     }
 }
