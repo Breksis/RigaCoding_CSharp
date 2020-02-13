@@ -14,6 +14,12 @@ namespace Day6_Classes
 
             Tasks.setA(skaitlis);
             Console.WriteLine(Tasks.getA());
+
+            Console.WriteLine(Tasks.getB());
+            String ievade = Console.ReadLine();
+            int num = Convert.ToInt32(ievade);
+            Tasks.setB(num);
+            Console.WriteLine(Tasks.getB());
         }
     }
 }
