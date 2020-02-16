@@ -26,8 +26,6 @@ namespace Day7_klases_un_obj
                 this.course = 3;
             }
 
-
-
         }
 
         public void print()

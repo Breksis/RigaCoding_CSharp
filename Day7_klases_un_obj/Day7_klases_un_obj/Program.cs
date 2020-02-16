@@ -27,7 +27,6 @@ namespace Day7_klases_un_obj
             //Kurss 1 - 3
             //ja ir vairak, iestatam 3
             //ja mazak, tad iestatam 1
-
             //uztaisit 2 testa objektus
 
 

@@ -13,10 +13,19 @@ namespace Day7_uzdevums
             Console.WriteLine("Ievadiet darbibu!");
             String darbiba = Console.ReadLine();
 
-            if(darbiba == "+")
+            if (darbiba == "+")
             {
                 Calculator.plus(num1, num2);
             }
+            else if (darbiba == "-")
+            {
+                Calculator.minus(num1, num2);
+            }
+            else if (darbiba == "*")
+            {
+                Calculator.reiz(num1, num2);
+            }
+            else Calculator.dal(num1, num2);
         }
     }
 }

@@ -11,9 +11,19 @@ namespace Day7_uzdevums
             Console.WriteLine("Rezultats ir " + (num1 + num2));
         }
 
-        public static void minus()
+        public static void minus(double num1, double num2)
         {
+            Console.WriteLine("Rezultats ir " + (num1 - num2));
+        }
 
+        public static void reiz(double num1, double num2)
+        {
+            Console.WriteLine("Rezultats ir " + (num1 * num2));
+        }
+
+        public static void dal(double num1, double num2)
+        {
+            Console.WriteLine("Rezultats ir " + (num1 / num2));
         }
     }
 }
