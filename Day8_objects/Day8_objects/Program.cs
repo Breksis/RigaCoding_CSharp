@@ -13,7 +13,7 @@ namespace Day8_objects
             //regenerateNumber() metode, kas no jauna uzgenere gadijuma skaitli
 
             //uztaisam vienu objektu
-            //uztasam otru objektu
+            //uztaisam otru objektu
             //while cikls
             //salidzinam abu objeku gadijuma skaitlus
             //tas kuram lielaks, tas uzvar
@@ -48,13 +48,14 @@ namespace Day8_objects
                 object2.setNumber(object2.randomGenerator());
 
                 Console.WriteLine();
+                Console.ReadKey();
             }
 
             if (win1 > win2)
             {
-                Console.WriteLine("Spele uzvar object1 ar rezultatu " + win1 + " pret " + win2);
+                Console.WriteLine("Speli uzvar object1 ar rezultatu " + win1 + " pret " + win2);
             }
-            else Console.WriteLine("Spele uzvar object2 ar rezultatu " + win2 + " pret " + win1);
+            else Console.WriteLine("Speli uzvar object2 ar rezultatu " + win2 + " pret " + win1);
         }
     }
 }

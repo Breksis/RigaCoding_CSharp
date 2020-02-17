@@ -6,11 +6,7 @@ namespace Day7_uzdevums
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ievadiet rinka radiusu!");
-            Aplis laukums = new Aplis(Ievade.input());
             
-            laukums.Print();
-
         }
 
         static void Kalkulators()
@@ -35,6 +31,15 @@ namespace Day7_uzdevums
                 Calculator.reiz(num1, num2);
             }
             else Calculator.dal(num1, num2);
+        }
+
+        static void rinkis()
+        {
+            Console.WriteLine("Ievadiet rinka radiusu!");
+            Aplis laukums = new Aplis(Ievade.input());
+
+            laukums.Print();
+
         }
     }
 }
