@@ -10,7 +10,7 @@ namespace Day8_objects
             //jabut laukam, kur glabasies skaitlis int
             //uzgeneret random skaitli no 1 lidz 10 (konstruktora)
             //jabut metodei getNumber, kas atgriez so skaitli
-            //regenerateNumber metode, kas no jauna uzgenere gadijuma skaitli
+            //regenerateNumber() metode, kas no jauna uzgenere gadijuma skaitli
 
             //uztaisam vienu objektu
             //uztasam otru objektu
@@ -26,10 +26,35 @@ namespace Day8_objects
             randomNumber object1 = new randomNumber();
             randomNumber object2 = new randomNumber();
 
-            Console.WriteLine(object1.getNumber());
-            Console.WriteLine(object2.getNumber());
+            int win1 = 0;
+            int win2 = 0;
 
+            while (win1 < 3 && win2 < 3)
+            {
+                Console.WriteLine("object1 skaitlis ir " + object1.getNumber() + ", object2 skaitlis ir " + object2.getNumber());
+                if (object1.getNumber() > object2.getNumber())
+                {
+                    win1++;
+                    Console.WriteLine("Raunda uzvar object1!");
+                }
+                else if (object1.getNumber() < object2.getNumber())
+                {
+                    win2++;
+                    Console.WriteLine("Raunda uzvar object2!");
+                }
+                else Console.WriteLine("Raunds ir neizskirts!");
 
+                object1.setNumber(object1.randomGenerator());
+                object2.setNumber(object2.randomGenerator());
+
+                Console.WriteLine();
+            }
+
+            if (win1 > win2)
+            {
+                Console.WriteLine("Spele uzvar object1 ar rezultatu " + win1 + " pret " + win2);
+            }
+            else Console.WriteLine("Spele uzvar object2 ar rezultatu " + win2 + " pret " + win1);
         }
     }
 }
