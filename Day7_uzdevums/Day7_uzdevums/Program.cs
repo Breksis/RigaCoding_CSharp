@@ -6,6 +6,11 @@ namespace Day7_uzdevums
     {
         static void Main(string[] args)
         {
+           
+        }
+
+        static void Kalkulators()
+        {
             Console.WriteLine("Ievadiet pirmo skaitli.");
             double num1 = Ievade.input();
             Console.WriteLine("Ievadiet otro skaitli.");
