@@ -6,7 +6,11 @@ namespace Day7_uzdevums
     {
         static void Main(string[] args)
         {
-           
+            Console.WriteLine("Ievadiet rinka radiusu!");
+            Aplis laukums = new Aplis(Ievade.input());
+            
+            laukums.Print();
+
         }
 
         static void Kalkulators()

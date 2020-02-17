@@ -9,6 +9,10 @@ namespace Day7_uzdevums
         private double r;
         private double PI = 3.14;
 
+        public Aplis(double r)
+        {
+            this.r = r;
+        }
         public double laukums()
         {
             double lauk = PI * r * r;
