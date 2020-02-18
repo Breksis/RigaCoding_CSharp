@@ -17,12 +17,12 @@ namespace Day8_objects
             return random;
         }
 
-        public void setNumber(int random)
+        public void newRandom()
         {
-            this.random = random;
+            this.random = randomGenerator();
         }
 
-        public int randomGenerator()
+        private int randomGenerator()
         {
             Random random = new Random();
             return random.Next(1, 10);

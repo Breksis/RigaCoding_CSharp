@@ -44,8 +44,8 @@ namespace Day8_objects
                 }
                 else Console.WriteLine("Raunds ir neizskirts!");
 
-                object1.setNumber(object1.randomGenerator());
-                object2.setNumber(object2.randomGenerator());
+                object1.newRandom();
+                object2.newRandom();
 
                 Console.WriteLine();
                 Console.ReadKey();
