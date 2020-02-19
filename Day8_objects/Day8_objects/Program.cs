@@ -47,8 +47,7 @@ namespace Day8_objects
                 object1.newRandom();
                 object2.newRandom();
 
-                Console.WriteLine();
-                Console.ReadKey();
+                Console.ReadLine();
             }
 
             if (win1 > win2)

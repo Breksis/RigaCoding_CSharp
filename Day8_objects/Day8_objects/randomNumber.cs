@@ -19,7 +19,7 @@ namespace Day8_objects
 
         public void newRandom()
         {
-            this.random = randomGenerator();
+            random = randomGenerator();
         }
 
         private int randomGenerator()
