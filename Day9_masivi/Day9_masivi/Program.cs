@@ -6,6 +6,7 @@ namespace Day9_masivi
     {
         static void Main(string[] args)
         {
+            Console.Title = "Masivi";
             tasks.task2();
         }
     }
