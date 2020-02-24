@@ -10,7 +10,19 @@ namespace UzminiSkaitli
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Prieks Tevi redzet " + gender() + "!");
+            Console.WriteLine("Sveiki! Vai drikst uzzinat Jusu vardu?");
+            String name = Console.ReadLine();
+            String male;
+            String female;
+            if (name.EndsWith("s"))
+            {
+                name = name.Remove(name.Length - 1);
+            }
+            else
+            {
+                name = name;
+            }
+                Console.WriteLine("Prieks Tevi redzet " + name + "!");
             Console.WriteLine();
             uzminiSkaitli();
             Console.ReadLine();
@@ -42,32 +54,15 @@ namespace UzminiSkaitli
                 else if (guess == cpu.getNumber())
                 {
                     Console.WriteLine();
-                    Console.WriteLine(gender() + " apsveicam! Jus atminejat skaitli!");
+                    Console.WriteLine(name + " apsveicam! Jus atminejat skaitli!");
                     break;
                 }
             }
             if(cpu.getWin() == 3)
             {
                 Console.WriteLine();
-                Console.WriteLine(gender() + " diemzel Jus skaitli neatminejat.");
+                Console.WriteLine(name + " diemzel Jus skaitli neatminejat.");
                 Console.WriteLine("Skaitlis bija " + cpu.getNumber() + "!");
-            }
-        }
-        static string gender()
-        {
-            Console.WriteLine("Sveiki! Vai drikst uzzinat Jusu vardu?");
-            String name = Console.ReadLine();
-            String male;
-            String female;
-            if (name.EndsWith("s"))
-            {
-                male = name.Remove(name.Length - 1);
-                return male;
-            }
-            else
-            {
-                female = name;
-                return female;
             }
         }
         

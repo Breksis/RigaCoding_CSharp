@@ -52,6 +52,8 @@ namespace MD_Masivi
                 mas3[i] = Convert.ToInt32(Console.ReadLine());
             }
 
+            Console.WriteLine();
+
             for(int i = 0; i < mas3.Length; i++)
             {
                 if(mas3[i] % 2 != 0)
