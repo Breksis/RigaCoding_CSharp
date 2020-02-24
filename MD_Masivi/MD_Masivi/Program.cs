@@ -6,7 +6,7 @@ namespace MD_Masivi
     {
         static void Main(string[] args)
         {
-            task4and5();
+            task1and2();
         }
 
         static void task1and2()
