@@ -6,7 +6,7 @@ namespace Day10_sortSample
     {
         static void Main(string[] args)
         {
-            time();
+            Hangman.game();
         }
 
         static void start()
