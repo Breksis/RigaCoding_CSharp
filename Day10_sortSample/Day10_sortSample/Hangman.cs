@@ -26,13 +26,12 @@ namespace Day10_sortSample
                 minamais[i] = stripas;
                 Console.Write(" " + minamais[i]);
             }
-            
+            int win = 0;
 
-            while (lives > 0)
+            while (lives > 0 || win == vards.Length)
             {
                 int skaits = 0;
-                int win = 0;
-
+                
                 Console.WriteLine();
                 Console.WriteLine("Ievadiet burtu.");
                 char burts = Convert.ToChar(Console.ReadLine());
@@ -57,18 +56,21 @@ namespace Day10_sortSample
                 {
                     Console.Write(" " + minamais[i]);
                 }
+                Console.WriteLine();
+                Console.WriteLine();
 
-                if(win == minamais.Length)
+                if (win == minamais.Length)
                 {
                     Console.WriteLine("Jus atminejat vardu.");
                     break;
                 }
-                else if(lives == 0)
+                else if (lives == 0)
                 {
                     Console.WriteLine("Jus vardu neatminejat.");
+                    break;
                 }
-                
             }
+           
         }
     }
 }

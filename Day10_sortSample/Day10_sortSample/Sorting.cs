@@ -59,8 +59,7 @@ namespace Day10_sortSample
             {
                 masivs[i] = randNum();
             }
-            return masivs;
-            
+            return masivs;   
         }
     }
 }
