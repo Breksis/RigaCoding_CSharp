@@ -18,6 +18,7 @@ namespace Students
                 }
                 else skaits++;
             }
+            Console.WriteLine();
 
             if (skaits == array.Length)
             {
@@ -68,25 +69,32 @@ namespace Students
             Console.WriteLine();
             Console.WriteLine("Kuru rindu velaties labot?");
             int edit = Convert.ToInt32(Console.ReadLine());
+            edit--;
 
-            if(edit == row)
+            Console.WriteLine("Ko velaties labot?");
+            Console.WriteLine("1. Vards.");
+            Console.WriteLine("2. Uzvards.");
+            Console.WriteLine("3. Kurss.");
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            if (choice == 1)
             {
-                Console.WriteLine("Ko velaties labot?");
-                Console.WriteLine("1. Vards.");
-                Console.WriteLine("2. Uzvards.");
-                Console.WriteLine("3. Kurss.");
-
-                int choice = Convert.ToInt32(Console.ReadLine());
-
-                switch (choice)
-                {
-                    case 1:
-                        Console.WriteLine("Ievadiet vardu.");
-                        String name = Console.ReadLine();
-                        array[row].SetName(Convert.ToString(name));
-                        break;
-                }
+                Console.WriteLine("Ievadiet vardu.");
+                array[edit].SetName(Console.ReadLine());
             }
+            else if (choice == 2)
+            {
+                Console.WriteLine("Ievadiet uzvardu.");
+                array[edit].SetSurname(Console.ReadLine());
+            }
+            else if (choice == 3)
+            {
+                Console.WriteLine("Ievadiet kursu.");
+                array[edit].SetCourse(Convert.ToInt32(Console.ReadLine()));
+            }
+            else Console.WriteLine("Tada darbiba neeksiste!");
+
 
         }
     }
