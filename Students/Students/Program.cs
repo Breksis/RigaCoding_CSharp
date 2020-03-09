@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Students
 {
@@ -11,7 +12,7 @@ namespace Students
 
         static void Menu()
         {
-            Students[] info = new Students[5];
+            List<Students> info = new List<Students>();
             bool working = true;
 
             while (working)

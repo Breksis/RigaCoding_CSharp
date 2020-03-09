@@ -6,66 +6,36 @@ namespace Students
 {
     public class Opcijas
     {
-        public static void PrintInfo(Students[] array)
+        public static void PrintInfo(List<Students> list)
         {
-            int skaits = 0;
-
-            for (int i = 0; i < array.Length; i++)
+            for(int i = 0; i < list.Count; i++)
             {
-                if (array[i] != null)
-                {
-                    array[i].print();
-                }
-                else skaits++;
+                Console.Write(i + 1 + ". "); list[i].print();
             }
             Console.WriteLine();
 
-            if (skaits == array.Length)
+            if (list.Count == 0)
             {
                 Console.WriteLine("Saraksts ir tuks!");
                 Console.WriteLine();
             }
         }
-        public static void AddStudent(Students[] array)
+        public static void AddStudent(List<Students> list)
         {
-            int skaits = 0;
+            Console.WriteLine("Ievadiet vardu.");
+            String name = Console.ReadLine();
 
-            for(int i = 0; i < array.Length; i++)
-            {
-                if (array[i] == null)
-                {
-                    Console.WriteLine("Ievadiet vardu.");
-                    String name = Console.ReadLine();
+            Console.WriteLine("Ievadiet uzvardu.");
+            String surname = Console.ReadLine();
 
-                    Console.WriteLine("Ievadiet uzvardu.");
-                    String surname = Console.ReadLine();
+            Console.WriteLine("Ievadiet kursu.");
+            int course = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Ievadiet kursu.");
-                    int course = Convert.ToInt32(Console.ReadLine());
-
-                    array[i] = new Students(name, surname, course);
-
-                    break;
-                }
-                else skaits++;
-
-                if(skaits == array.Length)
-                {
-                    Console.WriteLine("Saraksta vairs nav vietu!");
-                }
-            }
+            list.Add(new Students(name, surname, course));
         }
-        public static void EditStudent(Students[] array)
+        public static void EditStudent(List<Students> list)
         {
-            int row = 0;
-            for(int i = 0; i < array.Length; i++)
-            {
-                if(array[i] != null)
-                {
-                    row = i + 1;
-                    Console.Write(row + ". "); array[i].print();
-                }
-            }
+            PrintInfo(list);
             Console.WriteLine();
             Console.WriteLine("Kuru rindu velaties labot?");
             int edit = Convert.ToInt32(Console.ReadLine());
@@ -81,17 +51,17 @@ namespace Students
             if (choice == 1)
             {
                 Console.WriteLine("Ievadiet vardu.");
-                array[edit].SetName(Console.ReadLine());
+                list[edit].SetName(Console.ReadLine());
             }
             else if (choice == 2)
             {
                 Console.WriteLine("Ievadiet uzvardu.");
-                array[edit].SetSurname(Console.ReadLine());
+                list[edit].SetSurname(Console.ReadLine());
             }
             else if (choice == 3)
             {
                 Console.WriteLine("Ievadiet kursu.");
-                array[edit].SetCourse(Convert.ToInt32(Console.ReadLine()));
+                list[edit].SetCourse(Convert.ToInt32(Console.ReadLine()));
             }
             else Console.WriteLine("Tada darbiba neeksiste!");
 
