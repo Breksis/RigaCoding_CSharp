@@ -128,17 +128,12 @@ namespace Day13_Exceptions
                         {
                             Console.WriteLine("Tada rinda neeksiste!");
                         }
-
                         break;
                     case "5":
                         work = false;
                         break;
                 }
-
             }
-            
-
-
         }
     }
 }

@@ -64,8 +64,15 @@ namespace Students
                 list[edit].SetCourse(Convert.ToInt32(Console.ReadLine()));
             }
             else Console.WriteLine("Tada darbiba neeksiste!");
+        }
 
-
+        public static void DeleteStudent(List<Students> list)
+        {
+            PrintInfo(list);
+            Console.WriteLine();
+            Console.WriteLine("Kuru rindu velaties dzest?");
+            int delete = Convert.ToInt32(Console.ReadLine());
+            list.RemoveAt(delete - 1);
         }
     }
 }

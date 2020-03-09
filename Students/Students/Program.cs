@@ -20,26 +20,31 @@ namespace Students
                 Console.WriteLine("1. Izvadit informaciju.");
                 Console.WriteLine("2. Pievienot jaunu studentu.");
                 Console.WriteLine("3. Rediget ierakstu.");
-                Console.WriteLine("4.Beigt darbu.");
+                Console.WriteLine("4. Dzest ierakstu.");
+                Console.WriteLine("5. Beigt darbu");
                 Console.WriteLine();
                 Console.WriteLine("Izvelaties velamo darbibu:");
-                int opcija = Convert.ToInt32(Console.ReadLine());
+                String opcija = Console.ReadLine();
 
                 switch (opcija)
                 {
-                    case 1:
+                    case "1":
                         Console.Clear();
                         Opcijas.PrintInfo(info);
                         break;
-                    case 2:
+                    case "2":
                         Console.Clear();
                         Opcijas.AddStudent(info);
                         break;
-                    case 3:
+                    case "3":
                         Console.Clear();
                         Opcijas.EditStudent(info);
                         break;
-                    case 4:
+                    case "4":
+                        Console.Clear();
+                        Opcijas.DeleteStudent(info);
+                        break;
+                    case "5":
                         Console.Clear();
                         working = false;
                         break;
