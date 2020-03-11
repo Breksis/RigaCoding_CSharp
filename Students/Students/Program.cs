@@ -21,7 +21,8 @@ namespace Students
                 Console.WriteLine("2. Pievienot jaunu studentu.");
                 Console.WriteLine("3. Rediget ierakstu.");
                 Console.WriteLine("4. Dzest ierakstu.");
-                Console.WriteLine("5. Beigt darbu");
+                Console.WriteLine("5. Meklet.");
+                Console.WriteLine("6. Beigt darbu");
                 Console.WriteLine();
                 Console.WriteLine("Izvelaties velamo darbibu:");
                 String opcija = Console.ReadLine();
@@ -45,6 +46,10 @@ namespace Students
                         Opcijas.DeleteStudent(info);
                         break;
                     case "5":
+                        Console.Clear();
+                        Opcijas.SearchStudent(info);
+                        break;
+                    case "6":
                         Console.Clear();
                         working = false;
                         break;
