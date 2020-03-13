@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace Students
 {
@@ -38,6 +39,8 @@ namespace Students
             {
                 Console.WriteLine("Kursa nummuram ir jabut skaitlim!");
             }
+
+            Program.UpdateFile(list);
 
         }
         public static void EditStudent(List<Students> list)
@@ -78,7 +81,9 @@ namespace Students
             {
                 Console.WriteLine("Tada rinda nav saraksta!");
             }
-            
+
+            Program.UpdateFile(list);
+
         }
 
         public static void DeleteStudent(List<Students> list)
@@ -95,12 +100,15 @@ namespace Students
             {
                 Console.WriteLine("Ievadita neeksistejosa rinda!");
             }
+
+            Program.UpdateFile(list);
         }
 
         public static void SearchStudent(List<Students> list)
         {
             Console.WriteLine("Ievadiet vardu, uzvardu vai kursu.");
             string input = Console.ReadLine();
+            Console.Clear();
             int kurss;
             int.TryParse(input, out kurss);
             int skaits = 0;
@@ -113,11 +121,14 @@ namespace Students
                 }
                 else skaits++;
             }
+            Console.WriteLine();
 
             if(skaits == list.Count)
             {
                 Console.WriteLine("Sads students nav saraksta!");
             }
         }
+
+        
     }
 }
