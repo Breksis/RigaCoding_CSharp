@@ -39,8 +39,8 @@ namespace Day15_List_Reapeat
                 }
                 else turpinat = false;
             }
-                bool work = true;
 
+            bool work = true;
             while (work)
             {
                 Console.WriteLine("1. Izvadit");
