@@ -39,7 +39,7 @@
             // lblIzvade
             // 
             this.lblIzvade.AutoSize = true;
-            this.lblIzvade.Location = new System.Drawing.Point(126, 113);
+            this.lblIzvade.Location = new System.Drawing.Point(165, 113);
             this.lblIzvade.Name = "lblIzvade";
             this.lblIzvade.Size = new System.Drawing.Size(24, 13);
             this.lblIzvade.TabIndex = 0;
