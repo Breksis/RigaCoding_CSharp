@@ -8,7 +8,7 @@ namespace Day15_List_Reapeat
     {
         static void Main(string[] args)
         {
-            task1();
+            Tasks.task2();
         }
         static void task1()
         {
@@ -19,8 +19,6 @@ namespace Day15_List_Reapeat
             //Listu jasaglaba un janolasa no faila
 
             List<int> numbers = new List<int>();
-
-            ReadFile(numbers);
 
             bool turpinat = true;
             while (turpinat)
@@ -61,6 +59,7 @@ namespace Day15_List_Reapeat
                     case "2":
                         Console.WriteLine("Ievadiet skaitli.");
                         numbers.Add(Convert.ToInt32(Console.ReadLine()));
+                        UpdateList(numbers);
                         break;
                     case "3":
                         int sum = 0;
@@ -87,6 +86,7 @@ namespace Day15_List_Reapeat
 
                     while (!read.EndOfStream)
                     {
+                        rinda = Convert.ToInt32(read.ReadLine());
                         numbers.Add(rinda);
                     }
                     read.Close();
