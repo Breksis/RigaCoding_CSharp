@@ -19,6 +19,28 @@ namespace Day16_FileOpne
 
         private void btnAddList_Click(object sender, EventArgs e)
         {
+            List<String> userList = new List<String>();
+
+            if(inputBox.Text != "")
+            {
+                userList.Add(inputBox.Text);
+                var word = new ListViewItem();
+                word.Text = inputBox.Text;
+                TestListView.Items.Add(word);
+                inputBox.Text = "";
+            }
+            else
+            {
+                inputBox.Text = "Teksta laukam ir jabut aizpilditam!";
+            }
+        }
+
+
+        
+        //Piemers
+
+        /*private void btnAddList_Click(object sender, EventArgs e)
+        {
             List<String> testList = new List<string>();
 
             for(int i = 0; i < 5; i++)
@@ -32,6 +54,11 @@ namespace Day16_FileOpne
                 item.Text = str;
                 TestListView.Items.Add(item);
             }
-        }
+        }*/
+
+        //String lists
+        //Pievienot jaunu saraksta elementu
+        //Cilvekts ievada teksta lauka
+        //mes sadu elementu pievienojam listview
     }
 }
