@@ -20,24 +20,41 @@ namespace Day16_FileOpne
         private void btnAddList_Click(object sender, EventArgs e)
         {
             List<String> userList = new List<String>();
+            var word = new ListViewItem();
 
-            if(inputBox.Text != "")
+            if (inputBox.Text != "")
             {
-                userList.Add(inputBox.Text);
-                var word = new ListViewItem();
-                word.Text = inputBox.Text;
-                TestListView.Items.Add(word);
-                inputBox.Text = "";
-            }
-            else
-            {
-                inputBox.Text = "Teksta laukam ir jabut aizpilditam!";
+                foreach()
+                {
+
+                }
             }
         }
 
 
-        
-        //Piemers
+
+        //Task1<-------
+        /*private void btnAddList_Click(object sender, EventArgs e)
+         {
+             List<String> userList = new List<String>();
+
+             if(inputBox.Text != "")
+             {
+                 userList.Add(inputBox.Text);
+                 var word = new ListViewItem();
+                 word.Text = inputBox.Text;
+                 TestListView.Items.Add(word);
+                 inputBox.Text = "";
+             }
+             else
+             {
+                 inputBox.Text = "Teksta laukam ir jabut aizpilditam!";
+             }
+         }*/
+
+
+
+        //Piemers<------
 
         /*private void btnAddList_Click(object sender, EventArgs e)
         {
