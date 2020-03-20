@@ -31,7 +31,7 @@
             this.studentList = new System.Windows.Forms.ListView();
             this.btnRead = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.lblOutput = new System.Windows.Forms.Label();
+            this.InfoText = new System.Windows.Forms.Label();
             this.inputName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(183, 61);
+            this.btnDelete.Location = new System.Drawing.Point(183, 42);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 2;
@@ -71,14 +71,14 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // lblOutput
+            // InfoText
             // 
-            this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(335, 71);
-            this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(39, 13);
-            this.lblOutput.TabIndex = 3;
-            this.lblOutput.Text = "Teksts";
+            this.InfoText.AutoSize = true;
+            this.InfoText.Location = new System.Drawing.Point(399, 71);
+            this.InfoText.Name = "InfoText";
+            this.InfoText.Size = new System.Drawing.Size(56, 13);
+            this.InfoText.TabIndex = 3;
+            this.InfoText.Text = "Info teksts";
             // 
             // inputName
             // 
@@ -150,7 +150,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.inputName);
-            this.Controls.Add(this.lblOutput);
+            this.Controls.Add(this.InfoText);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnRead);
             this.Controls.Add(this.studentList);
@@ -166,7 +166,7 @@
         private System.Windows.Forms.ListView studentList;
         private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Label lblOutput;
+        private System.Windows.Forms.Label InfoText;
         private System.Windows.Forms.TextBox inputName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblName;
