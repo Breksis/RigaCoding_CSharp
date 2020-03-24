@@ -155,7 +155,7 @@
             this.Controls.Add(this.btnRead);
             this.Controls.Add(this.studentList);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Students";
             this.ResumeLayout(false);
             this.PerformLayout();
 
