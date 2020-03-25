@@ -6,6 +6,10 @@ namespace Day20
 {
     abstract class Transportlidzekli
     {
+        protected string Marka;
+        protected string Krasa;
+        protected int tilpums;
+
         public void Move()
         {
             Console.WriteLine("Braucam!");

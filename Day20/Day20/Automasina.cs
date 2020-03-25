@@ -6,12 +6,12 @@ namespace Day20
 {
     class Automasina : Transportlidzekli
     {
-        private string Marka = "Audi";
-        private string Krasa = "Melns";
-        private int tilpums = 55;
-
         public Automasina()
         {
+            Marka = "Audi";
+            Krasa = "Melns";
+            tilpums = 55;
+
             Console.WriteLine(Krasa + " " + Marka + " ===>");
         }
         public override void MakeSound()

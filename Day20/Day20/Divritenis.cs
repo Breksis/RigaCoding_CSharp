@@ -6,10 +6,10 @@ namespace Day20
 {
     class Divritenis : Transportlidzekli
     {
-        private string Krasa = "Balts";
-
         public Divritenis()
         {
+            Krasa = "Balts";
+
             Console.WriteLine(Krasa + " velosipeds ===>");
         }
         public override void MakeSound()
