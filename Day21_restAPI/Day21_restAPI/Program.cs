@@ -20,14 +20,16 @@ namespace Day21_restAPI
                 Console.WriteLine(e.id + " " + e.employee_name + " " + e.employee_salary + " " + e.employee_age + " " + e.profile_image);
             }
 
+            //Seit sanemtos datus saglabajam lista
             for(int i = 0; i < received.data.Count; i++)
             {
                 darbinieki.Add(new Employees(received.data[i].id, received.data[i].employee_name, received.data[i].employee_salary, received.data[i].employee_age, received.data[i].profile_image));
             }
 
+            //Sis ir tikai, lai parbauditu, vai dati lista vispar saglabajas
             foreach(var e in darbinieki)
             {
-                Console.WriteLine(e.employee_name);
+                Console.WriteLine(e.employee_name + " " + e.employee_salary);
             }
         }
         public static string GetReleases(string url)
