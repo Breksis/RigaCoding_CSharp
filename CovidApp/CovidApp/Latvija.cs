@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CovidApp
 {
-    class Global
+    class Latvija
     {
         public String confirmed;
         public String deaths;
         public String recovered;
 
-        public Global(String confirmed, String deaths, String recovered)
+        public Latvija(String confirmed, String deaths, String recovered)
         {
             this.confirmed = confirmed;
             this.deaths = deaths;

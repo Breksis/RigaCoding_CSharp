@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Net;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace CovidApp
 {
@@ -17,30 +18,29 @@ namespace CovidApp
         public Form1()
         {
             InitializeComponent();
-        }
+        } 
 
-        List<Global> world;
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void Valstis_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String url = "https://covidapi.info/api/v1/global";
-            String json = GetData(url);
-            var received = JsonConvert.DeserializeObject<ContainerGlobal>(json);
-
-            for(int i = 0; i < received.result.Count; i++)
+            if(Valstis.Text == "Pasaule")
             {
-                txtConfirmed.Text = received.result[i].confirmed;
-                txtDeaths.Text = received.result[i].deaths;
-                txtRecovered.Text = received.result[i].recovered;
-
-                lblDate.Text = received.date;
+                txtConfirmed.Text = Metodes.GlobalData().result.confirmed;
+                txtDeaths.Text = Metodes.GlobalData().result.deaths;
+                txtRecovered.Text = Metodes.GlobalData().result.recovered;
+                lblDate.Text = Metodes.GlobalData().date;
+            }
+            
+            if(Valstis.Text == "Latvija")
+            {
+                txtConfirmed.Text = Metodes.Latvija().result.confirmed;
+                txtDeaths.Text = Metodes.Latvija().result.deaths;
+                txtRecovered.Text = Metodes.Latvija().result.recovered;
             }
         }
-        public static string GetData(string url)
-        {
-            WebClient client = new WebClient();
-            String dati = client.DownloadString(url);
 
-            return dati;
+        private void ChartFill()
+        {
+            
         }
     }
 }
