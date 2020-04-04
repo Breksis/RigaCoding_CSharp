@@ -33,6 +33,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblConfirmed = new System.Windows.Forms.Label();
             this.lblDeaths = new System.Windows.Forms.Label();
@@ -170,11 +171,15 @@
             this.Chart.Size = new System.Drawing.Size(472, 226);
             this.Chart.TabIndex = 12;
             this.Chart.Text = "chart1";
+            title1.Name = "Pasaule";
+            title1.Text = "Pasaule";
+            this.Chart.Titles.Add(title1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(507, 424);
             this.Controls.Add(this.Chart);
             this.Controls.Add(this.lblRaditDatus);
