@@ -9,7 +9,7 @@ namespace Day21_restAPI
     {
         static void Main(string[] args)
         {
-            List<Employees> darbinieki = new List<Employees>();
+            /*List<Employees> darbinieki = new List<Employees>();
 
             String url = "http://dummy.restapiexample.com/api/v1/employees";
             String json = GetReleases(url);
@@ -30,7 +30,8 @@ namespace Day21_restAPI
             foreach(var e in darbinieki)
             {
                 Console.WriteLine(e.employee_name + " " + e.employee_salary);
-            }
+            }*/
+            Class1.test();
         }
         public static string GetReleases(string url)
         {

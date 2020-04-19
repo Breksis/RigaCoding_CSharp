@@ -31,13 +31,13 @@ namespace CovidApp
             return received;
         }
 
-        public static ContainerGlobal Latvija()
+        public static ContainerValstis AllCountries()
         {
-            String url = "https://covidapi.info/api/v1/country/LVA/latest";
+            String url = "https://covidapi.info/api/v1/global/latest";
             String json = GetData(url);
-            var received = JsonConvert.DeserializeObject<ContainerGlobal>(json);
+            var dataLV = JsonConvert.DeserializeObject<ContainerValstis>(json);
 
-            return received;
+            return dataLV;
         }
     }
 }

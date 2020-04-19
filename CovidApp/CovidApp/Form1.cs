@@ -28,19 +28,24 @@ namespace CovidApp
                 txtDeaths.Text = Metodes.GlobalData().result.deaths;
                 txtRecovered.Text = Metodes.GlobalData().result.recovered;
                 lblDate.Text = Metodes.GlobalData().date;
+
+                ChartFill();
             }
             
             if(Valstis.Text == "Latvija")
             {
-                txtConfirmed.Text = Metodes.Latvija().result.confirmed;
-                txtDeaths.Text = Metodes.Latvija().result.deaths;
-                txtRecovered.Text = Metodes.Latvija().result.recovered;
+                foreach(var item in Metodes.AllCountries().result)
+                {
+                    
+                }
             }
         }
 
         private void ChartFill()
         {
-            
+            this.Chart.Series["Saslimuši"].Points.AddXY("Pasaule", Metodes.GlobalData().result.confirmed);
+            this.Chart.Series["Miruši"].Points.AddXY("Pasaule", Metodes.GlobalData().result.deaths);
+            this.Chart.Series["Atveseļojušies"].Points.AddXY("Pasaule", Metodes.GlobalData().result.recovered);
         }
     }
 }

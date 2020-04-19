@@ -46,6 +46,7 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.lblRaditDatus = new System.Windows.Forms.Label();
             this.Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.Chart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,12 +176,22 @@
             title1.Text = "Pasaule";
             this.Chart.Titles.Add(title1);
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(563, 12);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(228, 386);
+            this.listView1.TabIndex = 13;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(507, 424);
+            this.ClientSize = new System.Drawing.Size(844, 424);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.Chart);
             this.Controls.Add(this.lblRaditDatus);
             this.Controls.Add(this.monthCalendar1);
@@ -215,6 +226,7 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label lblRaditDatus;
         private System.Windows.Forms.DataVisualization.Charting.Chart Chart;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CovidApp
 {
-    class ContainerLatvija
+    class ContainerValstis
     {
         public String count;
         public String date;
-        public Latvija result;
+
+        public List<Dictionary<String, Global>> result;
     }
 }
